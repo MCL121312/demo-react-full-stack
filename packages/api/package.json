@@ -1,0 +1,25 @@
+{
+  "name": "@demo/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "fmt": "oxfmt src/"
+  },
+  "dependencies": {
+    "@demo/shared": "workspace:*",
+    "@hono/node-server": "^1",
+    "hono": "^4",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "tsx": "^4",
+    "typescript": "^5",
+    "oxlint": "^1.70.0",
+    "oxfmt": "^0.55.0"
+  }
+}

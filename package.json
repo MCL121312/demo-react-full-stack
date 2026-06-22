@@ -1,0 +1,17 @@
+{
+  "name": "demo-react-fullstack",
+  "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "lint": "oxlint packages/",
+    "fmt": "oxfmt packages/",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
