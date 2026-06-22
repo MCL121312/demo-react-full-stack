@@ -3,7 +3,7 @@ export interface Article {
   title: string
   content: string
   tier: "free" | "vip"
-  publishedAt: string | null
+  published_at: number | null
 }
 
 export interface User {
