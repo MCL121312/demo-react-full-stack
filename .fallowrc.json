@@ -1,0 +1,8 @@
+{
+  "duplicates": {
+    "enabled": true,
+    "mode": "mild",
+    "minTokens": 100,
+    "ignore": ["**/api/client.ts"]
+  }
+}

@@ -1,5 +1,7 @@
 # demo-react-full-stack
-
+一个文章，阅读应用。
+- 读者可以通过**读者端 reader**手机访问搜索和读取文章
+- 作者可以通过**管理端 admin** 电脑访问写文章和发布文章
 ```
 ├── packages/
 │   ├── api/             Hono + node:sqlite（Code First）
