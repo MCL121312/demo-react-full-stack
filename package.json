@@ -1,16 +1,13 @@
 {
   "name": "demo-react-fullstack",
   "private": true,
-  "onlyBuiltDependencies": [
-    "esbuild"
-  ],
   "scripts": {
-    "predev": "oxfmt packages/",
+    "predev": "pnpm exec oxfmt apps/ shared/src/",
     "dev": "pnpm -r --parallel dev",
-    "check": "oxfmt --check packages/ && oxlint packages/ && pnpm -r typecheck",
+    "check": "pnpm exec oxfmt --check apps/ shared/src/ && pnpm exec oxlint apps/ shared/src/ && pnpm -r typecheck",
     "build": "pnpm -r build",
-    "lint": "oxlint packages/",
-    "fmt": "oxfmt packages/",
+    "lint": "pnpm exec oxlint apps/ shared/src/",
+    "fmt": "pnpm exec oxfmt apps/ shared/src/",
     "typecheck": "pnpm -r typecheck",
     "prepare": "nano-staged"
   },
@@ -19,12 +16,13 @@
   },
   "nano-staged": {
     "*.{ts,tsx}": [
-      "oxfmt",
-      "oxlint --fix"
+      "pnpm exec oxfmt",
+      "pnpm exec oxlint --fix"
     ]
   },
   "devDependencies": {
     "nano-staged": "^1.0.2",
-    "oxfmt": "^0.55.0"
+    "oxfmt": "^0.55.0",
+    "oxlint": "^1.71.0"
   }
 }

@@ -38,8 +38,8 @@ export default function ArticleEditor() {
         await post<Article>('/admin/articles', { title, content, tier });
       }
       navigate('/');
-    } catch (e) {
-      setError(e instanceof Error ? e.message : '保存失败');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '保存失败');
       setLoading(false);
     }
   }
